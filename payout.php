@@ -1,5 +1,5 @@
 <?php
-require (__DIR__.'db.php');
+require (__DIR__.'/inc/db.php');
 
 
 if (isset($_POST['Amount'])) {

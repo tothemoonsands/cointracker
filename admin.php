@@ -1,6 +1,6 @@
 <?php
 
-require (__DIR__.'db.php');
+require (__DIR__.'/inc/db.php');
 
 $sql = "SELECT hold FROM onhold WHERE id=(SELECT MAX(id) FROM onhold)";
 

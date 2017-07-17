@@ -18,7 +18,7 @@
 
 <?php
 
-require (__DIR__.'db.php');
+require (__DIR__.'/inc/db.php');
 
 
 $input = $_REQUEST['search'];

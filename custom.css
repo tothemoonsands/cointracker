@@ -33,7 +33,7 @@ select.frecuency:focus {
     color: #999;
 }
 body {
-    background-image: url("founder-front.png");
+    background-image: url("/img/founder-front.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center top; 
