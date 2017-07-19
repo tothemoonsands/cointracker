@@ -18,8 +18,6 @@
 
 <?php
 
-require (__DIR__.'/inc/db.php');
-
 
 $input = $_REQUEST['search'];
 
@@ -52,42 +50,8 @@ $found = (find($coins, $input));
 
 if ($found) {
 
-  $pay = "SELECT * FROM payouts";
-
-
-
-
-  
-
-
-
-  if ($result = mysqli_query($db, $pay)) {
-    $total = 0;
-
-
-
-    while ($row = mysqli_fetch_array($result)) {
-
-      $date = $row['date'];
-      $total += $row['amount'];
-
-
-
-    }
-  };
-
   echo '
   </br></br></br></br><div class="container"><div class="col-sm-6 col-sm-offset-3"><div class="panel-footer"><center>';
-
-  $hold = "SELECT hold FROM onhold WHERE id=(SELECT MAX(id) FROM onhold)";
-  $getholding = mysqli_fetch_assoc(mysqli_query($db,$hold));
-  $holding = round(($getholding['hold'] / 27), 8);
-  $rowcount=mysqli_num_rows($result);
-
-
-
-
-
   echo 'Address: ' . $found['address'] . '</br>';
   echo 'Serial Number: ' . $found['serial'] . '</br>';
   echo 'Year: ' .$found['year'] . '</br>';
